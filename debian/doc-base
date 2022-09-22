@@ -1,0 +1,9 @@
+Document: tofrodos
+Title: Debian tofrodos manual
+Author: Christopher Heng
+Abstract: This manual describes the functionality of tofrodos.
+Section: File Management
+
+Format: HTML
+Index: /usr/share/doc/tofrodos/tofrodos.html
+Files: /usr/share/doc/tofrodos/tofrodos.html

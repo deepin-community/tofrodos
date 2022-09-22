@@ -1,0 +1,19 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Tofrodos
+Source: http://www.thefreecountry.com/tofrodos/index.shtml
+Files-Excluded:
+ *.exe
+
+Files: *
+Copyright: 1996-2013 Christopher Heng
+License: GPL-2
+
+Files: debian/*
+Copyright: 2005-2006, Florian Ernst <florian@debian.org>
+           2008-2011, Alexander Reichle-Schmehl <tolimar@debian.org>
+           2013-2020, Markus Koschany <apo@debian.org>
+License: GPL-2
+
+License: GPL-2
+ On Debian systems, the complete text of the GNU General Public License version
+ 2 can be found in `/usr/share/common-licenses/GPL-2'.

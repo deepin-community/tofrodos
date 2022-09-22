@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE=1
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+CPPFLAGS := $(shell dpkg-buildflags --get CPPFLAGS)
+CFLAGS   := $(shell dpkg-buildflags --get CFLAGS) $(CPPFLAGS)
+LDFLAGS  := $(shell dpkg-buildflags --get LDFLAGS)
+
+
+%:
+	dh $@ --sourcedirectory=src
+
+override_dh_auto_clean:
+	dh_auto_clean
+	$(RM) -r -v src/fromdos src/todos
+
+override_dh_auto_build:
+	dh_auto_build -- CDEBUG="$(CFLAGS)" LDEBUG="$(LDFLAGS)"
+
+override_dh_auto_install:
+	dh_auto_install -- \
+		BINDIR=$(CURDIR)/debian/tofrodos/usr/bin \
+		MANDIR=$(CURDIR)/debian/tofrodos/usr/share/man/man1
+

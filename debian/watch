@@ -1,0 +1,4 @@
+version=3
+opts=uversionmangle=s/(\d)[\.\-]?((rc|pre|dev|beta|alpha|b|a)\d*)$/$1~$2/,dversionmangle=s/\+(dfsg|debian|ds|repack|repacked)//,\
+repacksuffix=+ds \
+http://www.thefreecountry.com/tofrodos/index.shtml .*/tofrodos-(\d.*)\.(?:tgz|tbz2|tar\.(?:gz|bz2|xz))
